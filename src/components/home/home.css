@@ -1,0 +1,62 @@
+.contenedor-principal {
+    min-height: 93vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-principal h1 {
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: normal;
+    color: white;
+}
+
+.contenedor-principal p {
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    color: white;
+}
+
+.home-botones {
+    margin-top: 2rem;
+    display: flex;
+    gap: 3rem;
+}
+
+.home-botones button {
+    padding: .7rem 1.4rem;
+    font-size: 1rem;
+    border-radius: .5rem;
+    background-color: #212529;
+    color: #ced4da;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.home-botones button:hover {
+    color: #212529;
+}
+
+.home-botones button::after {
+    content: '';
+    background-color: #ced4da;
+    position: absolute;
+    z-index: -1;
+    padding: .5rem 1rem;
+    display: block;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0,1);
+    transition: all 0.8s ease;
+}
+
+.home-botones button:hover::after {
+    transition: all 0.8s ease-out;
+    transform: skewX(-45deg) scale(1,1);
+}

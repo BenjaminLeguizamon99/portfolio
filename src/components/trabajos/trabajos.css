@@ -1,0 +1,97 @@
+.contenedor-trabajos {
+    background-color: #212529;
+    padding-bottom: 3rem;
+}
+
+.contenedor-trabajos p {
+    text-align: center;
+    color: #ced4da;
+    font-size: 2rem;
+}
+
+.subtitulo-trabajos {
+    text-align: center;
+    color: #ced4da;
+    padding-top: 3rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contenedor-cards {
+    display: flex;
+}
+
+.card-proyectos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card-proyectos img {
+    width: 80%;
+    border-radius: 1rem;
+}
+
+.card-proyectos p {
+    font-size: 1.5rem;
+}
+
+.card-proyectos button {
+    padding: 1rem;
+    font-size: 1.3rem;
+    border-radius: .7rem;
+    border: none;
+}
+
+.card-individual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.flecha-slider-izq {
+    margin: 17% 0;
+    font-size: 3rem;
+    position: relative;
+    left: 3rem;
+    color: #ced4da;
+}
+
+.flecha-slider-der {
+    margin: 17% 0;
+    font-size: 3rem;
+    position: relative;
+    right: 3rem;
+    color: #ced4da;
+}
+
+.btn-proyectos:hover {
+    transform: scale(1.1,1.1);
+    transition: .4s ease-in-out;
+}
+.fade-in {
+	-webkit-animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

@@ -1,0 +1,22 @@
+.subtitulo-contacto {
+    text-align: center;
+    color: #212529;
+    padding-top: 3rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.formulario-contacto {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.item-formulario {
+    width: 40%;
+    padding: .7rem;
+    border-radius: .3rem;
+    border: 1px solid #212529;
+}

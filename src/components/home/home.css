@@ -1,22 +1,27 @@
 .contenedor-principal {
-    min-height: 93vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.contenedor-titulo-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .contenedor-principal h1 {
     text-transform: uppercase;
     font-size: 5rem;
     font-weight: normal;
-    color: white;
+    color: #ced4da;
 }
 
 .contenedor-principal p {
     text-transform: uppercase;
     font-size: 4.5rem;
-    color: white;
+    color: #ced4da;
 }
 
 .home-botones {
@@ -26,37 +31,61 @@
 }
 
 .home-botones button {
-    padding: .7rem 1.4rem;
-    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
     border-radius: .5rem;
-    background-color: #212529;
-    color: #ced4da;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    display: inline-block;
+    background-color: #ced4da;
+    color: #212529;
+    border: none;
 }
 
-.home-botones button:hover {
+.home-botones a {
+    text-decoration: none;
     color: #212529;
 }
 
-.home-botones button::after {
-    content: '';
-    background-color: #ced4da;
-    position: absolute;
-    z-index: -1;
-    padding: .5rem 1rem;
-    display: block;
-    left: -20%;
-    right: -20%;
-    top: 0;
-    bottom: 0;
-    transform: skewX(-45deg) scale(0,1);
-    transition: all 0.8s ease;
+.linkedin-home-btn {
+    color: #212529;
+    text-decoration: none;
 }
 
-.home-botones button:hover::after {
-    transition: all 0.8s ease-out;
-    transform: skewX(-45deg) scale(1,1);
+.home-botones button:hover {
+    transform: scale(1.1,1.1);
+    transition: .4s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+    .contenedor-principal h1 {
+        font-size: 3.2rem;
+    }
+    .contenedor-principal p {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-principal h1 {
+        font-size: 2.5rem;
+    }
+    .contenedor-principal p {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .contenedor-principal h1 {
+        font-size: 2rem;
+    }
+    .contenedor-principal p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 360px ) {
+    .contenedor-principal h1 {
+        font-size: 1.2rem;
+    }
+    .contenedor-principal p {
+        font-size: 1rem;
+    }
 }

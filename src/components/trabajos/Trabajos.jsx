@@ -1,9 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import './trabajos.css'
 import {BsFillArrowLeftCircleFill} from 'react-icons/bs'
 import {BsFillArrowRightCircleFill} from 'react-icons/bs'
+import IdiomaContext from '../../context/IdiomaProvider'
 
-const Trabajos = ({proyectos}) => {
+const Trabajos = () => {
+
+  const { proyectos, ingles } = useContext(IdiomaContext)
 
   const [imagenActual, setImagenActual] = useState(0)
   const cantidad = proyectos?.length;
@@ -18,21 +21,21 @@ const Trabajos = ({proyectos}) => {
   }
 
   return (
-    <div className='contenedor-trabajos'>
-        <h3 className='subtitulo-trabajos'>Trabajos</h3>
+    <div className='contenedor-trabajos' id='trabajos'>
+        <h3 className='subtitulo-trabajos'>{ingles ? "Projects" : "Proyectos"}</h3>
         <div className='contenedor-cards'>
           <BsFillArrowLeftCircleFill onClick={imagenAnterior} className='flecha-slider-izq'/>
           {proyectos.map((e) => {
             return (
-              <div className='card-proyectos'>
+                <div className='card-proyectos' key={e.id}>
                 {imagenActual === e.id && (
-                  <div className='card-individual'>
-                    <img src={e.img} alt='Imagen ilustrativa del proyecto' className='fade-in' key={e.id}></img>
-                    <p>{e.descripcion}</p>
-                    <button className='btn-proyectos'>Ver proyecto</button>
+                    <div className='card-individual'>
+                      <img src={e.img} alt='Imagen ilustrativa del proyecto' className='fade-in' key={e.id}></img>
+                      <p>{ingles ? e.description : e.descripcion}</p>
+                      <button className='btn-proyectos'><a href={e.link} target='_blank'>{ingles ? "View project" : "Ver proyecto"}</a></button>
                   </div>
                 )}
-            </div>
+            </div>              
               )
             })}        
             <BsFillArrowRightCircleFill onClick={imagenSiguiente} className='flecha-slider-der' />

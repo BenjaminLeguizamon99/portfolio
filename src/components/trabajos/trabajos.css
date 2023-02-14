@@ -31,7 +31,7 @@
 }
 
 .card-proyectos img {
-    width: 80%;
+    width: 85%;
     border-radius: 1rem;
 }
 
@@ -40,9 +40,9 @@
 }
 
 .card-proyectos button {
-    padding: 1rem;
-    font-size: 1.3rem;
-    border-radius: .7rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: .5rem;
     border: none;
 }
 
@@ -74,9 +74,14 @@
     transform: scale(1.1,1.1);
     transition: .4s ease-in-out;
 }
+
+.btn-proyectos a {
+    text-decoration: none;
+    color: #212529;
+}
 .fade-in {
-	-webkit-animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	-webkit-animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 @-webkit-keyframes fade-in {
     0% {
@@ -95,3 +100,10 @@
     }
   }
   
+@media (max-width: 768px) {
+    .flecha-slider-der, .flecha-slider-izq {
+        position: absolute;
+        margin: 15% -2rem;
+        z-index: 1;
+    }
+}

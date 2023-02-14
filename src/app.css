@@ -1,6 +1,8 @@
 .portada {
-    /* background-color: black; */
-    background-image: radial-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.8)), url(../assets/probando-fondo.jpg);
+    background-image: radial-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('../assets/probando-fondo.jpg');
+    /* background-image: url('assets/descarga (1).png'); */
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    height: 100vh;
 }

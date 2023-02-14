@@ -40,7 +40,6 @@ const Contacto = () => {
       return
     }
     setError(false)
-    setEnviado(true)
     resetForm()
   }
 

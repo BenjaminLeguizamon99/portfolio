@@ -40,6 +40,7 @@ const Contacto = () => {
       return
     }
     setError(false)
+    setEnviado(true)
     resetForm()
   }
 
@@ -47,7 +48,7 @@ const Contacto = () => {
   return (
     <>
         <h3 className='subtitulo-contacto' id='contacto'>{ingles ? "Contact" : "Contacto"}</h3>
-         <form action="correo.php" method='POST' className='formulario-contacto' onSubmit={handleSubmit}>
+         <form className='formulario-contacto' action='correo.php' method='POST' onSubmit={handleSubmit}>
           
           {error && <p className='error-formulario'>Todos los campos son obligatorios</p>}
           {errorEmail && <p className='error-formulario'>Email no válido!</p>}
@@ -70,12 +71,10 @@ const Contacto = () => {
 
           <textarea name="mensaje" cols="30" rows="10"   className='item-formulario' value={mensaje}
           placeholder={ingles ? "Your message..." : "Escriba su mensaje..."}
-          onChange={(e)=> {setMensaje(e.target.value)}}
-          ></textarea>
+          onChange={(e)=> {setMensaje(e.target.value)}}>
+          </textarea>
 
-        <button className='btn-formulario' type='submit'>{ingles ? "Send!" : "Enviar!" }</button>
-          
-
+          <button className='btn-formulario' type='submit'>{ingles ? "Send!" : "Enviar!" }</button>
          </form>
          
          <p className='parrafo-contacto'>{ingles ? "Or you can find me in: " : "Otros medios para contactarme: "}</p>

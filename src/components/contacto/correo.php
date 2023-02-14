@@ -5,10 +5,9 @@
     $email = $_POST['email'];
     $mensaje = $_POST['mensaje'];
 
-    $header = 'Enviado desde el Portfolio de Benjamin Leguizamon';
-    $mensajeCompleto = $mensaje . "\nAtentamente: " . $nombre . $apellido;
+    $header = 'Enviado desde el portfolio de Benjamin Leguizamon';
+    $mensajeCompleto = $mensaje . "\nAtentamente: " . $nombre;
 
     mail($destinatario, $asunto, $mensajeCompleto, $header);
-    echo "<script>alert('Correo Enviado Exitosamente')</script>";
 
 ?>

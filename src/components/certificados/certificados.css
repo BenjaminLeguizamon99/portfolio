@@ -59,11 +59,10 @@
         margin: 0 1rem 2rem 1rem;
     }
     .contenedor-certificados img {
-        width: 40%;
-        height: 40%;
+        width: 60%;
+        height: 60%;
     }
     .nombre-del-curso {
         margin: .5rem 0 .5rem 0;
     }
-
 }
